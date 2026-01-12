@@ -1,0 +1,46 @@
+/* 1. Limit the main width as requested */
+main {
+    max-width: 840px;
+    margin: 0 auto;
+    /* Centers the main content on the page */
+}
+
+/* 2. Specific style for your profile image (Azande Moaga) */
+main img {
+    width: 150px;
+    height: auto;
+    display: block;
+    /* Helps with centering */
+    margin: 10px auto;
+}
+
+/* 3. Style for the Johannesburg aside element */
+aside {
+    width: 20rem;
+    margin: 1rem;
+    border: 1px solid rgb(0 0 0 / 0.2);
+    /* Subtle transparent border */
+    padding: 1rem;
+    background-color: #eee;
+    color: #333;
+    text-align: center;
+}
+
+/* 4. Style for the Johannesburg image inside the aside */
+aside img {
+    width: 200px;
+    height: auto;
+    /* Important: maintains aspect ratio to prevent distortion */
+}
+
+/* 5. Set all paragraph padding to 0 */
+p {
+    padding: 0;
+}
+
+/* 6. Footer separation and alignment */
+footer {
+    margin-top: 15px;
+    border-top: 1px solid #000;
+    text-align: center;
+}
