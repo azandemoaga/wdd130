@@ -1,80 +1,132 @@
-/* Header - Using CSS Grid */
-header {
-    display: grid;
-    grid-template-columns: 150px 1fr;
-    /* Logo fixed width, Nav takes remaining space */
-    align-items: center;
-    padding: 10px 20px;
-    background-color: #f0f0f0;
-    /* Use your color palette */
-}
-
-/* Navigation - Using CSS Flexbox */
-.nav-links {
-    display: flex;
-    list-style: none;
-    justify-content: space-around;
-    /* Distributes links evenly */
+/* Layout Defaults */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
     padding: 0;
 }
 
-.nav-links li a {
-    text-decoration: none;
-    font-weight: bold;
-    color: #333;
-}
-
-/* History Section Layout */
-.history-content {
-    display: flex;
+/* Header - CSS Grid */
+header {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    /* Logo on left, nav on right */
     align-items: center;
-    gap: 20px;
+    background-color: #e1d5ff;
+    /* Light purple from wireframe */
+    padding: 20px 40px;
 }
 
-.history-content img {
-    width: 400px;
-    /* Adjust based on your wireframe */
+/* Nav - CSS Flexbox */
+.nav-links {
+    display: flex;
+    justify-content: flex-end;
+    /* Push links to the right */
+    list-style: none;
+    gap: 5px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    background-color: white;
+    padding: 10px 20px;
+    border: 1px solid #999;
+}
+
+/* Main content width */
+main {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    margin-bottom: 40px;
+    border: 1px solid #333;
+    /* Border as seen in wireframe */
+    padding: 20px;
+}
+
+.hero-box {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    /* Text takes more space than image */
+    gap: 20px;
+    align-items: center;
+    border: 1px solid #999;
+    padding: 20px;
+}
+
+/* History Section - 3 Column Grid */
+.history {
+    text-align: center;
+    margin-bottom: 40px;
+    border: 1px solid #999;
+    padding: 20px;
+}
+
+.history-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    align-items: center;
+}
+
+.history-image-container {
+    background-color: #311b92;
+    /* Dark purple from wireframe */
+    padding: 10px;
+}
+
+.history-img {
+    width: 100%;
     height: auto;
 }
 
-/* Adventures Section - Horizontal Images */
+/* Adventures Section - 5 Column Grid */
+.adventures {
+    text-align: center;
+    border: 1px solid #999;
+    padding: 20px;
+}
+
 .adventure-container {
-    display: flex;
-    justify-content: space-between;
-    gap: 10px;
-    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    /* 5 equal columns */
+    gap: 15px;
 }
 
 .adventure-container figure {
-    flex: 1;
-    /* Makes all 5 figures share equal width */
     margin: 0;
-    text-align: center;
+    background-color: #f0f0f0;
+    padding: 10px;
 }
 
 .adventure-container img {
     width: 100%;
-    /* Makes image responsive within the figure */
     height: auto;
-    border-radius: 5px;
 }
 
-/* Footer - Social Icons to the Right */
+/* Footer - Flexbox */
 footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
-    background-color: #333;
-    color: white;
+    background-color: #e1d5ff;
+    padding: 20px 40px;
+    margin-top: 40px;
 }
 
 .social-links {
     display: flex;
-    gap: 15px;
+    gap: 10px;
 }
 
 .social-links img {
-    width: 30px;
-    height: auto;
+    width: 35px;
+    border: 1px solid #333;
+    padding: 2px;
 }
