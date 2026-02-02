@@ -1,0 +1,132 @@
+/* Layout Defaults */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header - CSS Grid */
+header {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    /* Logo on left, nav on right */
+    align-items: center;
+    background-color: #e1d5ff;
+    /* Light purple from wireframe */
+    padding: 20px 40px;
+}
+
+/* Nav - CSS Flexbox */
+.nav-links {
+    display: flex;
+    justify-content: flex-end;
+    /* Push links to the right */
+    list-style: none;
+    gap: 5px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    background-color: white;
+    padding: 10px 20px;
+    border: 1px solid #999;
+}
+
+/* Main content width */
+main {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    margin-bottom: 40px;
+    border: 1px solid #333;
+    /* Border as seen in wireframe */
+    padding: 20px;
+}
+
+.hero-box {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    /* Text takes more space than image */
+    gap: 20px;
+    align-items: center;
+    border: 1px solid #999;
+    padding: 20px;
+}
+
+/* History Section - 3 Column Grid */
+.history {
+    text-align: center;
+    margin-bottom: 40px;
+    border: 1px solid #999;
+    padding: 20px;
+}
+
+.history-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    align-items: center;
+}
+
+.history-image-container {
+    background-color: #311b92;
+    /* Dark purple from wireframe */
+    padding: 10px;
+}
+
+.history-img {
+    width: 100%;
+    height: auto;
+}
+
+/* Adventures Section - 5 Column Grid */
+.adventures {
+    text-align: center;
+    border: 1px solid #999;
+    padding: 20px;
+}
+
+.adventure-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    /* 5 equal columns */
+    gap: 15px;
+}
+
+.adventure-container figure {
+    margin: 0;
+    background-color: #f0f0f0;
+    padding: 10px;
+}
+
+.adventure-container img {
+    width: 100%;
+    height: auto;
+}
+
+/* Footer - Flexbox */
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #e1d5ff;
+    padding: 20px 40px;
+    margin-top: 40px;
+}
+
+.social-links {
+    display: flex;
+    gap: 10px;
+}
+
+.social-links img {
+    width: 35px;
+    border: 1px solid #333;
+    padding: 2px;
+}
